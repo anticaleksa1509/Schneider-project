@@ -1,0 +1,45 @@
+The Sports Booking Service is designed as a microservice architecture to handle the organization and scheduling of sports activities.
+
+Core features:
+
+User & role management
+
+Support for multiple roles (Admin, Coach, User, Editor).
+
+JWT-based authentication and authorization.
+
+Secure endpoints with role-based permissions.
+
+Booking system
+
+Users can book, view, edit, and cancel sessions.
+
+Coaches can create and manage sports groups and training sessions.
+
+Automatic updates of session/order status (e.g., scheduled, canceled, completed).
+
+Scheduling & concurrency
+
+Implemented with Spring TaskScheduler / ThreadPoolTaskScheduler for recurring tasks.
+
+Supports transactional safety (@Transactional) to avoid race conditions.
+
+Notifications
+
+Asynchronous email notifications using JMS (ActiveMQ) and JavaMailSender.
+
+Events include successful registration, booking confirmation, and cancellations.
+
+Validation & error handling
+
+Data validation with Jakarta Validation annotations.
+
+Centralized error logging with a dedicated ErrorMessage table.
+
+Tech stack & persistence
+
+Backend: Spring Boot, Spring Data JPA, Hibernate.
+
+Frontend: Angular (for user interface).
+
+Database: MySQL with foreign key constraints and schema migrations.
