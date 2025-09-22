@@ -1,0 +1,35 @@
+The Email Service was developed to provide reliable and asynchronous email notifications across the microservice ecosystem.
+
+Core features:
+
+Message-driven design
+
+Uses ActiveMQ queues to receive events from other services (e.g., Auth Service, Sports Booking Service).
+
+Ensures loose coupling: business services only publish events, while Email Service handles all communication with SMTP.
+
+Email delivery
+
+Implemented with Spring’s JavaMailSender.
+
+Supports HTML and plain-text emails.
+
+Configurable SMTP settings for different environments.
+
+Asynchronous processing
+
+Email requests are queued and processed independently, avoiding delays in main service execution.
+
+Retries and error handling mechanisms ensure high reliability.
+
+Scalability & statelessness
+
+The service is fully stateless; multiple instances can be run in parallel to handle large volumes of email traffic.
+
+Horizontally scalable with message queue load balancing.
+
+Error handling & monitoring
+
+Failed email attempts are logged for auditing and troubleshooting.
+
+Integration with monitoring tools for tracking email delivery success/failure rates.
