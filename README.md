@@ -1,6 +1,6 @@
 # Sports Booking System
 
-This project is a **microservice-based application** for managing sports bookings, built with **Spring Boot (Java)** on the backend and **Angular** on the frontend.  
+This project is a **microservice-based application** for managing sports bookings, built with **Spring Boot (Java)**.  
 It was developed during an internship at Schneider Electric with the goal of learning **microservice architecture**, **aspect-oriented programming (AOP)**, **reflection**, and **custom permission management** using annotations.
 
 ---
@@ -19,8 +19,6 @@ Admins and coaches can manage sessions, groups, and reservations, while the syst
 
 - **Sports Booking**
   - Create, schedule, and cancel reservations.
-  - Automatic status updates for reservations (Created → Scheduled → Completed / Canceled).
-  - Real-time status refresh (implemented with polling; WebSockets/SSE planned).
 
 - **Permissions & Security**
   - Custom annotations like `@RequiresRole` and `@RequiresPermission`.
@@ -30,14 +28,9 @@ Admins and coaches can manage sessions, groups, and reservations, while the syst
   - Asynchronous **email notifications** using **JMS (ActiveMQ)** and `JavaMailSender`.
   - Notifications for registration, booking confirmation, and cancellations.
 
-- **Error Handling**
-  - Centralized error logging in a dedicated `ErrorMessage` table.
-  - Consistent API responses for exceptions.
-
 - **Tech Stack**
   - **Backend:** Spring Boot, Spring Data JPA, Hibernate
-  - **Frontend:** Angular
-  - **Database:** PostgreSQL
+  - **Database:** MySQL
   - **Messaging:** JMS (ActiveMQ)
   - **Security:** JWT authentication & authorization
 
